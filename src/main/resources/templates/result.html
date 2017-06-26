@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+      <title>July 4th CodeAcademy Potluck Chef list.</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  </head>
+  <body>
+     
+      <table>
+  
+  <tr>
+  <th>Name</th>
+  <th>Food</th>
+   </tr>
+  <tr th:each = "user:${list}">
+  	<td th:text="${user.id}"/>
+  	<td th:text="${user.name}"/>
+  	<td th:text="${user.food}"/>
+  </tr>
+  
+  </table>
+   
+   
+      <a href ="/index"> Add More People</a>
+     <a href ="/delete"> Delete People</a>
+     
+  </body>
+</html>
